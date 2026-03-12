@@ -42,233 +42,136 @@
     color: #000;
     flex-shrink: 0;
   }
+  .status-bar-left { display: flex; align-items: center; gap: 4px; min-width: 80px; }
+  .status-bar-right { display: flex; align-items: center; gap: 6px; min-width: 80px; justify-content: flex-end; }
 
-  .status-bar-left {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    min-width: 80px;
-  }
-
-  .status-bar-right {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    min-width: 80px;
-    justify-content: flex-end;
-  }
-
-  /* Signal bars */
   .signal-bars { display: flex; gap: 1.5px; align-items: flex-end; }
-  .signal-bars span {
-    display: block;
-    width: 3.5px;
-    background: #000;
-    border-radius: 1px;
-  }
+  .signal-bars span { display: block; width: 3.5px; background: #000; border-radius: 1px; }
   .signal-bars span:nth-child(1) { height: 4px; }
   .signal-bars span:nth-child(2) { height: 6px; opacity: 0.35; }
   .signal-bars span:nth-child(3) { height: 9px; opacity: 0.35; }
   .signal-bars span:nth-child(4) { height: 12px; opacity: 0.35; }
 
-  /* WiFi icon */
   .wifi-icon { width: 16px; height: 12px; }
 
-  /* Battery */
-  .battery {
-    display: flex;
-    align-items: center;
-    gap: 1px;
-    font-size: 13px;
-    font-weight: 400;
-    color: #000;
-  }
+  .battery { display: flex; align-items: center; gap: 1px; font-size: 13px; font-weight: 400; color: #000; }
   .battery-shell {
-    width: 27px; height: 13px;
-    border: 1.5px solid #000;
-    border-radius: 4px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 2px;
+    width: 27px; height: 13px; border: 1.5px solid #000; border-radius: 4px;
+    position: relative; display: flex; align-items: center; padding: 2px;
   }
   .battery-shell::after {
-    content: '';
-    position: absolute;
-    right: -3px;
-    width: 2px; height: 5px;
-    background: #000;
-    border-radius: 0 1px 1px 0;
-    opacity: 0.4;
+    content: ''; position: absolute; right: -3px; width: 2px; height: 5px;
+    background: #000; border-radius: 0 1px 1px 0; opacity: 0.4;
   }
-  .battery-fill {
-    width: 90%;
-    height: 100%;
-    background: #000;
-    border-radius: 1.5px;
-  }
+  .battery-fill { width: 90%; height: 100%; background: #000; border-radius: 1.5px; }
 
   /* Nav bar */
   .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 14px 6px;
-    flex-shrink: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 2px 14px 6px; flex-shrink: 0;
   }
-
   .nav-back-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px; height: 36px;
-    background: #e8e8ed;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; background: #e8e8ed; border-radius: 50%; border: none; cursor: pointer;
   }
   .nav-back-btn svg { width: 11px; height: 18px; color: #000; }
-
   .nav-right-group {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    background: #e8e8ed;
-    border-radius: 22px;
-    padding: 4px 6px;
+    display: flex; align-items: center; gap: 2px;
+    background: #e8e8ed; border-radius: 22px; padding: 4px 6px;
   }
   .nav-icon-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px; height: 34px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; background: none; border: none; cursor: pointer; border-radius: 50%;
   }
   .nav-icon-btn svg { width: 20px; height: 20px; color: #000; }
 
   /* Content area */
-  .note-content-wrapper {
-    flex: 1;
-    overflow-y: auto;
-    padding: 12px 22px 20px;
-  }
+  .note-content-wrapper { flex: 1; overflow-y: auto; padding: 12px 22px 20px; }
 
   .note-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #000;
-    width: 100%;
-    background: none;
-    border: none;
-    outline: none;
-    resize: none;
-    font-family: inherit;
-    line-height: 1.3;
-    padding: 4px 0;
+    font-size: 28px; font-weight: 700; color: #000; width: 100%;
+    background: none; border: none; outline: none; resize: none;
+    font-family: inherit; line-height: 1.3; padding: 4px 0;
   }
   .note-title::placeholder { color: #c7c7cc; }
 
-  .note-body {
-    font-size: 17px;
-    color: #000;
-    width: 100%;
-    background: none;
-    border: none;
-    outline: none;
-    resize: none;
-    font-family: inherit;
-    line-height: 1.5;
-    min-height: 400px;
-    padding: 2px 0;
+  .note-body-segment {
+    font-size: 17px; color: #000; width: 100%;
+    background: none; border: none; outline: none; resize: none;
+    font-family: inherit; line-height: 1.5; padding: 2px 0;
+    display: block;
   }
-  .note-body::placeholder { color: #c7c7cc; }
+  .note-body-segment::placeholder { color: #c7c7cc; }
+  .note-body-segment:first-of-type { min-height: 100px; }
+
+  /* Inline images */
+  .img-wrapper { position: relative; display: block; padding: 6px 0; }
+  .img-wrapper img { max-width: 100%; border-radius: 8px; display: block; }
+  .img-wrapper .img-remove {
+    position: absolute; top: 12px; right: 6px;
+    width: 24px; height: 24px; background: rgba(0,0,0,0.5); color: #fff;
+    border: none; border-radius: 50%; cursor: pointer; font-size: 14px;
+    line-height: 24px; text-align: center;
+  }
 
   /* Bottom toolbar */
   .bottom-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 14px 30px;
-    flex-shrink: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 14px 30px; flex-shrink: 0; position: relative;
   }
-
   .toolbar-left {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    background: #e8e8ed;
-    border-radius: 22px;
-    padding: 6px 10px;
+    display: flex; align-items: center; gap: 2px;
+    background: #e8e8ed; border-radius: 22px; padding: 6px 10px;
   }
   .toolbar-icon-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px; height: 34px;
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; background: none; border: none; cursor: pointer; position: relative;
   }
   .toolbar-icon-btn svg { width: 22px; height: 22px; color: #000; }
+  .toolbar-icon-btn:active { opacity: 0.5; }
 
+  .home-indicator { width: 134px; height: 5px; background: #000; border-radius: 3px; margin: 0 auto 8px; opacity: 0.2; }
 
-  /* Home indicator */
-  .home-indicator {
-    width: 134px;
-    height: 5px;
-    background: #000;
-    border-radius: 3px;
-    margin: 0 auto 8px;
-    opacity: 0.2;
-  }
-
-  /* Export button — in toolbar right */
   .export-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px; height: 44px;
-    background: #e8e8ed;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; background: #e8e8ed; border-radius: 50%; border: none; cursor: pointer;
   }
   .export-btn svg { width: 22px; height: 22px; color: #000; }
   .export-btn:active { opacity: 0.5; }
 
-  /* Toast */
+  /* Popup menus */
+  .popup-menu {
+    position: absolute; bottom: 60px; left: 14px; background: #fff;
+    border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 6px 0; display: none; z-index: 50; min-width: 200px;
+  }
+  .popup-menu.show { display: block; }
+  .popup-menu-item {
+    display: flex; align-items: center; gap: 12px; padding: 10px 16px;
+    font-size: 16px; color: #000; background: none; border: none;
+    width: 100%; cursor: pointer; font-family: inherit; text-align: left;
+  }
+  .popup-menu-item:hover { background: #f2f2f7; }
+  .popup-menu-item .item-icon { font-size: 18px; width: 24px; text-align: center; }
+  .popup-menu-item.active { color: #007aff; }
+  .popup-separator { height: 0.5px; background: #d1d1d6; margin: 4px 0; }
+
   .toast {
-    position: fixed;
-    top: 30px;
-    left: 50%;
+    position: fixed; top: 30px; left: 50%;
     transform: translateX(-50%) translateY(-100px);
-    background: #333;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 500;
-    opacity: 0;
-    transition: all 0.3s ease;
-    z-index: 200;
-    pointer-events: none;
+    background: #333; color: #fff; padding: 12px 24px; border-radius: 12px;
+    font-size: 15px; font-weight: 500; opacity: 0;
+    transition: all 0.3s ease; z-index: 200; pointer-events: none;
   }
-  .toast.show {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
+  .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
   /* Hide all scrollbars */
   .note-content-wrapper::-webkit-scrollbar,
   .phone-frame::-webkit-scrollbar,
   .note-title::-webkit-scrollbar,
-  .note-body::-webkit-scrollbar { width: 0; display: none; }
-  .note-content-wrapper, .phone-frame, .note-title, .note-body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  .note-body-segment::-webkit-scrollbar { width: 0; display: none; }
+  .note-content-wrapper, .phone-frame, .note-title, .note-body-segment {
+    scrollbar-width: none; -ms-overflow-style: none;
   }
 </style>
 </head>
@@ -279,7 +182,6 @@
   <div class="status-bar">
     <div class="status-bar-left">
       <span id="clock">11:14</span>
-      <!-- Silent mode bell icon -->
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M13.73 21a2 2 0 01-3.46 0"/>
         <path d="M18.63 13A17.89 17.89 0 0118 8"/>
@@ -288,10 +190,7 @@
       </svg>
     </div>
     <div class="status-bar-right">
-      <div class="signal-bars">
-        <span></span><span></span><span></span><span></span>
-      </div>
-      <!-- WiFi icon -->
+      <div class="signal-bars"><span></span><span></span><span></span><span></span></div>
       <svg class="wifi-icon" viewBox="0 0 24 18" fill="#000">
         <path d="M12 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
         <path d="M8.53 13.47a5.003 5.003 0 016.94 0" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
@@ -300,9 +199,7 @@
       </svg>
       <div class="battery">
         <span>91</span>
-        <div class="battery-shell">
-          <div class="battery-fill"></div>
-        </div>
+        <div class="battery-shell"><div class="battery-fill"></div></div>
       </div>
     </div>
   </div>
@@ -315,23 +212,20 @@
       </svg>
     </button>
     <div class="nav-right-group">
-      <!-- Undo -->
-      <button class="nav-icon-btn">
+      <button class="nav-icon-btn" id="btn-undo" title="Undo">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 10h10a5 5 0 015 5v0a5 5 0 01-5 5H8"/>
           <polyline points="7,6 3,10 7,14"/>
         </svg>
       </button>
-      <!-- Share -->
-      <button class="nav-icon-btn">
+      <button class="nav-icon-btn" id="btn-share" title="Share">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 3v12"/>
           <polyline points="6,8 12,3 18,8"/>
           <path d="M6 14v4a1 1 0 001 1h10a1 1 0 001-1v-4"/>
         </svg>
       </button>
-      <!-- More (three dots horizontal) -->
-      <button class="nav-icon-btn">
+      <button class="nav-icon-btn" title="More">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <circle cx="6" cy="12" r="2"/>
           <circle cx="12" cy="12" r="2"/>
@@ -342,16 +236,17 @@
   </div>
 
   <!-- Note Content -->
-  <div class="note-content-wrapper">
+  <div class="note-content-wrapper" id="note-content-wrapper">
     <textarea class="note-title" id="note-title" placeholder="Title" rows="1"></textarea>
-    <textarea class="note-body" id="note-body" placeholder="Start typing or paste text here..."></textarea>
+    <div id="note-body-container">
+      <textarea class="note-body-segment" placeholder="Start typing or paste text here..." rows="1"></textarea>
+    </div>
   </div>
 
   <!-- Bottom Toolbar -->
   <div class="bottom-toolbar">
     <div class="toolbar-left">
-      <!-- Formatting (Aa with lines) -->
-      <button class="toolbar-icon-btn">
+      <button class="toolbar-icon-btn" id="btn-format" title="List formatting">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <circle cx="6" cy="8" r="1.5" fill="currentColor" stroke="none"/>
           <line x1="11" y1="8" x2="22" y2="8"/>
@@ -361,22 +256,19 @@
           <line x1="11" y1="20" x2="19" y2="20"/>
         </svg>
       </button>
-      <!-- Attachment (paperclip) -->
-      <button class="toolbar-icon-btn">
+      <button class="toolbar-icon-btn" id="btn-attach" title="Attach image">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/>
         </svg>
       </button>
-      <!-- Markup (A in circle) -->
-      <button class="toolbar-icon-btn">
+      <button class="toolbar-icon-btn" id="btn-fontsize" title="Font size">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <circle cx="12" cy="12" r="10"/>
           <path d="M9 16l3-9 3 9"/>
           <line x1="10" y1="14" x2="14" y2="14"/>
         </svg>
       </button>
-      <!-- Link -->
-      <button class="toolbar-icon-btn">
+      <button class="toolbar-icon-btn" id="btn-link" title="Insert link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
@@ -390,37 +282,52 @@
         <line x1="12" y1="15" x2="12" y2="3"/>
       </svg>
     </button>
+
+    <div class="popup-menu" id="popup-format">
+      <button class="popup-menu-item" data-format="bullet"><span class="item-icon">•</span>Bullet List</button>
+      <button class="popup-menu-item" data-format="number"><span class="item-icon">1.</span>Numbered List</button>
+      <button class="popup-menu-item" data-format="checklist"><span class="item-icon">☐</span>Checklist</button>
+      <div class="popup-separator"></div>
+      <button class="popup-menu-item" data-format="none"><span class="item-icon">⌫</span>Remove Formatting</button>
+    </div>
+
+    <div class="popup-menu" id="popup-fontsize">
+      <button class="popup-menu-item" data-size="15"><span class="item-icon" style="font-size:13px">A</span>Small</button>
+      <button class="popup-menu-item active" data-size="17"><span class="item-icon" style="font-size:16px">A</span>Medium</button>
+      <button class="popup-menu-item" data-size="20"><span class="item-icon" style="font-size:19px">A</span>Large</button>
+      <button class="popup-menu-item" data-size="24"><span class="item-icon" style="font-size:22px">A</span>Extra Large</button>
+    </div>
   </div>
 
   <div class="home-indicator"></div>
 </div>
 
-
+<input type="file" id="file-input" accept="image/*" multiple style="display:none">
 <div class="toast" id="toast"></div>
 
 <script>
-  // Update clock
+  const noteTitle = document.getElementById('note-title');
+  const bodyContainer = document.getElementById('note-body-container');
+  const fileInput = document.getElementById('file-input');
+  let activeSegment = bodyContainer.querySelector('.note-body-segment');
+  let currentFontSize = '17px';
+
+  // Clock
   function updateClock() {
-    const now = new Date();
     document.getElementById('clock').textContent =
-      now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+      new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
   }
   updateClock();
   setInterval(updateClock, 60000);
 
-  // Auto-resize textareas
+  // Auto-resize
   function autoResize(el) {
     el.style.height = 'auto';
     el.style.height = el.scrollHeight + 'px';
   }
-
-  const noteTitle = document.getElementById('note-title');
-  const noteBody = document.getElementById('note-body');
-
   noteTitle.addEventListener('input', () => autoResize(noteTitle));
-  noteBody.addEventListener('input', () => autoResize(noteBody));
 
-  // Toast notification
+  // Toast
   function showToast(msg) {
     const toast = document.getElementById('toast');
     toast.textContent = msg;
@@ -428,7 +335,295 @@
     setTimeout(() => toast.classList.remove('show'), 2000);
   }
 
-  // Export to PNG — text only, no UI chrome
+  // ---- Body segment management ----
+  function createSegment(text) {
+    const ta = document.createElement('textarea');
+    ta.className = 'note-body-segment';
+    ta.rows = 1;
+    ta.value = text || '';
+    ta.style.fontSize = currentFontSize;
+    setupSegment(ta);
+    return ta;
+  }
+
+  function setupSegment(ta) {
+    ta.addEventListener('input', () => autoResize(ta));
+    ta.addEventListener('focus', () => { activeSegment = ta; });
+    ta.addEventListener('keydown', handleListKeydown);
+    ta.addEventListener('keydown', handleImageDelete);
+    ta.addEventListener('click', handleChecklistToggle);
+    requestAnimationFrame(() => autoResize(ta));
+  }
+
+  // Backspace at start or Delete at end → remove adjacent image and merge segments
+  function handleImageDelete(e) {
+    const ta = e.target;
+    if (e.key === 'Backspace' && ta.selectionStart === 0 && ta.selectionEnd === 0) {
+      const prev = ta.previousElementSibling;
+      if (prev && prev.classList.contains('img-wrapper')) {
+        e.preventDefault();
+        const prevSegment = prev.previousElementSibling;
+        prev.remove();
+        if (prevSegment && prevSegment.classList.contains('note-body-segment')) {
+          const cursorPos = prevSegment.value.length;
+          prevSegment.value += ta.value;
+          ta.remove();
+          activeSegment = prevSegment;
+          prevSegment.focus();
+          prevSegment.selectionStart = prevSegment.selectionEnd = cursorPos;
+          autoResize(prevSegment);
+        }
+      }
+    } else if (e.key === 'Delete' && ta.selectionStart === ta.value.length && ta.selectionEnd === ta.value.length) {
+      const next = ta.nextElementSibling;
+      if (next && next.classList.contains('img-wrapper')) {
+        e.preventDefault();
+        const nextSegment = next.nextElementSibling;
+        next.remove();
+        if (nextSegment && nextSegment.classList.contains('note-body-segment')) {
+          const cursorPos = ta.value.length;
+          ta.value += nextSegment.value;
+          nextSegment.remove();
+          activeSegment = ta;
+          ta.focus();
+          ta.selectionStart = ta.selectionEnd = cursorPos;
+          autoResize(ta);
+        }
+      }
+    }
+  }
+
+  // Setup initial segment
+  setupSegment(activeSegment);
+
+  // ---- Helpers ----
+  function getCurrentLineRange(textarea) {
+    const val = textarea.value;
+    const pos = textarea.selectionStart;
+    let lineStart = val.lastIndexOf('\n', pos - 1) + 1;
+    let lineEnd = val.indexOf('\n', pos);
+    if (lineEnd === -1) lineEnd = val.length;
+    return { lineStart, lineEnd, line: val.substring(lineStart, lineEnd) };
+  }
+
+  function insertAtCursor(textarea, text) {
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    textarea.value = textarea.value.substring(0, start) + text + textarea.value.substring(end);
+    textarea.selectionStart = textarea.selectionEnd = start + text.length;
+    textarea.focus();
+    autoResize(textarea);
+  }
+
+  // ---- Popups ----
+  function closeAllPopups() {
+    document.querySelectorAll('.popup-menu').forEach(p => p.classList.remove('show'));
+  }
+  function togglePopup(id) {
+    const popup = document.getElementById(id);
+    const wasOpen = popup.classList.contains('show');
+    closeAllPopups();
+    if (!wasOpen) popup.classList.add('show');
+  }
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.popup-menu') && !e.target.closest('.toolbar-icon-btn')) closeAllPopups();
+  });
+
+  // ---- 1. List Formatting ----
+  document.getElementById('btn-format').addEventListener('click', (e) => {
+    e.stopPropagation();
+    togglePopup('popup-format');
+  });
+
+  document.getElementById('popup-format').addEventListener('click', (e) => {
+    const btn = e.target.closest('.popup-menu-item');
+    if (!btn || !activeSegment) return;
+    const format = btn.dataset.format;
+    const val = activeSegment.value;
+    const start = activeSegment.selectionStart;
+    const end = activeSegment.selectionEnd;
+
+    let selStart = val.lastIndexOf('\n', start - 1) + 1;
+    let selEnd = val.indexOf('\n', end);
+    if (selEnd === -1) selEnd = val.length;
+    const lines = val.substring(selStart, selEnd).split('\n');
+    const stripped = lines.map(line => line.replace(/^(\s*)(•\s|☐\s|☑\s|\d+\.\s)/, '$1'));
+
+    let newLines;
+    if (format === 'bullet') newLines = stripped.map(l => '• ' + l.trimStart());
+    else if (format === 'number') newLines = stripped.map((l, i) => `${i + 1}. ` + l.trimStart());
+    else if (format === 'checklist') newLines = stripped.map(l => '☐ ' + l.trimStart());
+    else newLines = stripped.map(l => l.trimStart());
+
+    const newText = newLines.join('\n');
+    activeSegment.value = val.substring(0, selStart) + newText + val.substring(selEnd);
+    activeSegment.selectionStart = activeSegment.selectionEnd = selStart + newText.length;
+    activeSegment.focus();
+    autoResize(activeSegment);
+    closeAllPopups();
+  });
+
+  // Auto-continue list on Enter
+  function handleListKeydown(e) {
+    if (e.key !== 'Enter') return;
+    const ta = e.target;
+    const val = ta.value;
+    const pos = ta.selectionStart;
+    const { lineStart, line } = getCurrentLineRange(ta);
+
+    let prefix = null;
+    let numberMatch = null;
+    if (line.match(/^• .+/)) prefix = '• ';
+    else if ((numberMatch = line.match(/^(\d+)\. .+/))) prefix = (parseInt(numberMatch[1]) + 1) + '. ';
+    else if (line.match(/^[☐☑] .+/)) prefix = '☐ ';
+
+    if (!prefix) return;
+
+    const justPrefix = line === '• ' || line.match(/^\d+\. $/) || line === '☐ ' || line === '☑ ';
+    if (justPrefix) {
+      e.preventDefault();
+      ta.value = val.substring(0, lineStart) + val.substring(pos);
+      ta.selectionStart = ta.selectionEnd = lineStart;
+      autoResize(ta);
+      return;
+    }
+
+    e.preventDefault();
+    const insert = '\n' + prefix;
+    ta.value = val.substring(0, pos) + insert + val.substring(pos);
+    ta.selectionStart = ta.selectionEnd = pos + insert.length;
+    autoResize(ta);
+  }
+
+  // Toggle checklist
+  function handleChecklistToggle() {
+    const ta = this;
+    const { lineStart, lineEnd, line } = getCurrentLineRange(ta);
+    if (line.startsWith('☐ ')) {
+      ta.value = ta.value.substring(0, lineStart) + '☑ ' + line.substring(2) + ta.value.substring(lineEnd);
+      ta.selectionStart = ta.selectionEnd = lineStart + 2;
+    } else if (line.startsWith('☑ ')) {
+      ta.value = ta.value.substring(0, lineStart) + '☐ ' + line.substring(2) + ta.value.substring(lineEnd);
+      ta.selectionStart = ta.selectionEnd = lineStart + 2;
+    }
+  }
+
+  // ---- 2. Attachment — insert image at cursor ----
+  document.getElementById('btn-attach').addEventListener('click', () => {
+    closeAllPopups();
+    fileInput.click();
+  });
+
+  fileInput.addEventListener('change', () => {
+    for (const file of fileInput.files) {
+      if (!file.type.startsWith('image/')) continue;
+      const reader = new FileReader();
+      reader.onload = (e) => insertImageAtCursor(e.target.result);
+      reader.readAsDataURL(file);
+    }
+    fileInput.value = '';
+  });
+
+  function insertImageAtCursor(src) {
+    if (!activeSegment) return;
+
+    const ta = activeSegment;
+    const pos = ta.selectionStart;
+    const before = ta.value.substring(0, pos);
+    const after = ta.value.substring(pos);
+
+    // Set current segment to text before cursor
+    ta.value = before;
+    autoResize(ta);
+
+    // Create image wrapper
+    const wrapper = document.createElement('div');
+    wrapper.className = 'img-wrapper';
+    const img = document.createElement('img');
+    img.src = src;
+    const removeBtn = document.createElement('button');
+    removeBtn.className = 'img-remove';
+    removeBtn.textContent = '×';
+    removeBtn.addEventListener('click', () => {
+      // Merge the segments around the removed image
+      const prev = wrapper.previousElementSibling;
+      const next = wrapper.nextElementSibling;
+      if (prev && next && prev.classList.contains('note-body-segment') && next.classList.contains('note-body-segment')) {
+        prev.value = prev.value + next.value;
+        autoResize(prev);
+        next.remove();
+        activeSegment = prev;
+        prev.focus();
+        prev.selectionStart = prev.selectionEnd = prev.value.length;
+      }
+      wrapper.remove();
+    });
+    wrapper.appendChild(img);
+    wrapper.appendChild(removeBtn);
+
+    // Create new segment for text after cursor
+    const newSegment = createSegment(after);
+
+    // Insert after current segment
+    ta.after(wrapper);
+    wrapper.after(newSegment);
+
+    // Focus the new segment
+    activeSegment = newSegment;
+    newSegment.focus();
+    newSegment.selectionStart = newSegment.selectionEnd = 0;
+  }
+
+  // ---- 3. Font size ----
+  document.getElementById('btn-fontsize').addEventListener('click', (e) => {
+    e.stopPropagation();
+    togglePopup('popup-fontsize');
+  });
+
+  document.getElementById('popup-fontsize').addEventListener('click', (e) => {
+    const btn = e.target.closest('.popup-menu-item');
+    if (!btn) return;
+    const size = btn.dataset.size;
+    currentFontSize = size + 'px';
+    // Apply to all segments
+    bodyContainer.querySelectorAll('.note-body-segment').forEach(ta => {
+      ta.style.fontSize = currentFontSize;
+      autoResize(ta);
+    });
+    document.querySelectorAll('#popup-fontsize .popup-menu-item').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    closeAllPopups();
+    showToast(`Font size: ${size}px`);
+  });
+
+  // ---- 4. Insert link ----
+  document.getElementById('btn-link').addEventListener('click', () => {
+    closeAllPopups();
+    if (!activeSegment) return;
+    const url = prompt('Enter URL:');
+    if (!url) return;
+    const label = prompt('Link text (optional):') || url;
+    insertAtCursor(activeSegment, label + ' (' + url + ')');
+  });
+
+  // ---- Nav: Undo ----
+  document.getElementById('btn-undo').addEventListener('click', () => {
+    document.execCommand('undo');
+  });
+
+  // ---- Nav: Share ----
+  document.getElementById('btn-share').addEventListener('click', async () => {
+    const segments = bodyContainer.querySelectorAll('.note-body-segment');
+    const bodyText = Array.from(segments).map(s => s.value).join('\n');
+    const text = (noteTitle.value ? noteTitle.value + '\n\n' : '') + bodyText;
+    if (!text.trim()) { showToast('Nothing to share'); return; }
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast('Copied to clipboard');
+    } catch { showToast('Copy failed'); }
+  });
+
+  // ---- Export to PNG ----
   document.getElementById('export-btn').addEventListener('click', async () => {
     const container = document.createElement('div');
     container.style.cssText = `
@@ -448,38 +643,46 @@
       container.appendChild(titleDiv);
     }
 
-    if (noteBody.value.trim()) {
-      const bodyDiv = document.createElement('div');
-      bodyDiv.textContent = noteBody.value;
-      bodyDiv.style.cssText = `
-        font-size: 17px; color: #000; line-height: 1.5;
-        white-space: pre-wrap; word-break: break-word;
-      `;
-      container.appendChild(bodyDiv);
+    // Iterate through body container children in order
+    let hasContent = !!noteTitle.value.trim();
+    for (const child of bodyContainer.children) {
+      if (child.classList.contains('note-body-segment') && child.value.trim()) {
+        hasContent = true;
+        const bodyDiv = document.createElement('div');
+        bodyDiv.style.cssText = `
+          font-size: ${currentFontSize}; color: #000; line-height: 1.5;
+          white-space: pre-wrap; word-break: break-word;
+        `;
+        child.value.split('\n').forEach((line, i) => {
+          if (i > 0) bodyDiv.appendChild(document.createElement('br'));
+          bodyDiv.appendChild(document.createTextNode(line));
+        });
+        container.appendChild(bodyDiv);
+      } else if (child.classList.contains('img-wrapper')) {
+        hasContent = true;
+        const img = child.querySelector('img');
+        if (img) {
+          const clone = document.createElement('img');
+          clone.src = img.src;
+          clone.style.cssText = 'max-width: 100%; border-radius: 8px; margin: 6px 0; display: block;';
+          container.appendChild(clone);
+        }
+      }
     }
 
-    if (!noteTitle.value.trim() && !noteBody.value.trim()) {
-      showToast('Nothing to export');
-      return;
-    }
+    if (!hasContent) { showToast('Nothing to export'); return; }
 
     document.body.appendChild(container);
 
     try {
       const canvas = await html2canvas(container, {
-        backgroundColor: '#fff',
-        scale: 2,
-        useCORS: true,
-        logging: false,
+        backgroundColor: '#fff', scale: 2, useCORS: true, logging: false,
       });
-
       container.remove();
-
       const link = document.createElement('a');
       link.download = `note-${Date.now()}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
-
       showToast('PNG exported!');
     } catch (err) {
       container.remove();
